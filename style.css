@@ -1,54 +1,115 @@
-body {
-  margin: 0;
-  font-family: Arial;
-  background: #0f172a;
-  color: white;
+body{
+  margin:0;
+  background:#000;
+  color:#0f0;
+  font-family:monospace;
+  overflow-x:hidden;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 30px;
-  background: #020617;
+header{
+  display:flex;
+  justify-content:space-between;
+  padding:15px;
+  background:#000;
 }
 
-nav a {
-  margin: 0 10px;
-  color: white;
-  text-decoration: none;
+nav a{
+  color:#0f0;
+  margin:0 10px;
+  text-decoration:none;
 }
 
-.section {
-  padding: 40px;
-  text-align: center;
+.menu-toggle{
+  display:none;
+  cursor:pointer;
 }
 
-.profile-img {
-  width: 150px;
-  border-radius: 50%;
+.hero{
+  text-align:center;
+  padding:100px 20px;
+  position:relative;
 }
 
-.social-icons i {
-  margin: 10px;
-  font-size: 24px;
+#matrix{
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:-1;
 }
 
-.project-card {
-  background: #1e293b;
-  margin: 10px;
-  padding: 15px;
-  border-radius: 10px;
+.btn{
+  padding:10px 20px;
+  margin:5px;
+  border-radius:5px;
 }
 
-form input, form textarea {
-  display: block;
-  width: 80%;
-  margin: 10px auto;
-  padding: 10px;
+.primary{
+  background:#0f0;
+  color:#000;
 }
 
-button {
-  padding: 10px 20px;
-  background: #38bdf8;
-  border: none;
+.outline{
+  border:1px solid #0f0;
+  color:#0f0;
+}
+
+.section{
+  text-align:center;
+  padding:50px;
+}
+
+.skills{
+  width:80%;
+  margin:auto;
+}
+
+.bar{
+  background:#111;
+  border-radius:10px;
+}
+
+.bar div{
+  height:10px;
+  background:#0f0;
+}
+
+.project-card{
+  background:#111;
+  margin:10px;
+  padding:15px;
+  border-radius:10px;
+}
+
+form input, textarea{
+  width:80%;
+  margin:10px;
+  padding:10px;
+  display:block;
+  background:#000;
+  color:#0f0;
+  border:1px solid #0f0;
+}
+
+button{
+  background:#0f0;
+  color:#000;
+  border:none;
+  padding:10px;
+}
+
+@media(max-width:768px){
+  nav{
+    display:none;
+    flex-direction:column;
+  }
+
+  nav.active{
+    display:flex;
+  }
+
+  .menu-toggle{
+    display:block;
+  }
 }
